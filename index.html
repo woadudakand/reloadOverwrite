@@ -10,12 +10,12 @@
     <h1>First Reload</h1>
 
     <script>
-        var firstLoad = localStorage.getItem("firstLoad");
-        if(!firstLoad) {
-            localStorage.setItem("firstLoad", true)
-        } else {
+        var firstLoad = document.cookie;
+        if(!firstLoad) {            
+            document.cookie = "firstLoad= true;";            
+        } else {            
             window.location.replace("secondPage.html");
-        }
+        }        
     </script>
 </body>
 </html>
